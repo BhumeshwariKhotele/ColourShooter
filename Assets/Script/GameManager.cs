@@ -10,7 +10,7 @@ public class GameManager : MonoBehaviour
     public float spawnDistance;
     public float gameTimer;
     public Text gameText;
-
+    public GameObject player;
     // Start is called before the first frame update
     void Start()
     {
@@ -33,6 +33,11 @@ public class GameManager : MonoBehaviour
           {
               OnEnemyDestroyed();
           };
+
+         enemyController.onWrongEnemy = () =>
+        {
+            OnWrongEnemy();
+        };
     }
 
     public void OnEnemyDestroyed()
@@ -40,6 +45,12 @@ public class GameManager : MonoBehaviour
         Debug.Log("enemy destroyed");
     }
 
+    public void OnWrongEnemy()
+    {
+        Debug.Log("Wrong Enemy");
+        Time.timeScale = 0;
+        player.GetComponent<UnityStandardAssets.Characters.FirstPerson.FirstPersonController>().enabled = false;
+    }
     // Update is called once per frame
     void Update()
     {

@@ -136,7 +136,7 @@ GameObject:
   - component: {fileID: 13503391}
   - component: {fileID: 13503390}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: Weapon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -299,6 +299,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bulletSpeed: 50
   bullet: {fileID: 6772333563061512974, guid: 116f3e316afc9a3438c8248a95e6f315, type: 3}
+  weapon: {fileID: 13503389}
 --- !u!1 &211902841
 GameObject:
   m_ObjectHideFlags: 0
@@ -766,6 +767,7 @@ MonoBehaviour:
   spawnDistance: 10
   gameTimer: 60
   gameText: {fileID: 211902843}
+  player: {fileID: 70037663}
 --- !u!4 &1434629874
 Transform:
   m_ObjectHideFlags: 0
