@@ -20,6 +20,9 @@ public class EnemyController : MonoBehaviour
             this.GetComponent<Renderer>().material.SetColor("_Color", Color.red);
         }
     }
+
+
+
     private void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.GetComponent<BulletController>() != null)
